@@ -1,6 +1,6 @@
 # 原始资料与各自作用
 
-- [morluto/rea](https://github.com/morluto/rea)：用户指定的逆向工具，辅助管理脚本和工具分析。不是同型号固件源，也不能代替本机提取和硬件验证。
+- [morluto/rea](https://github.com/morluto/rea)：本次 6.8.0 实际解析管理页 JavaScript、识别 FDIUtil 的 PE 容器；原始诊断流返回不支持格式。详见 [实际作用事实卡](../facts/REA_USAGE.md)。不是同型号固件源、提取器或本仓库复现的必需依赖。
 - [域格 ASR Cat4 Windows 升级说明](https://docs.yuge-info.com/doku.php?id=asr:cat4:update_w)：普通端口、早期 WUKONG 下载口、官方驱动和 SWDownloader 入口。该页面向域格列出的模块；其恢复出厂 / AT 指令不能直接推定适用本机。
 - [移远 CATStudio 官方下载](https://developer.quectel.com/en/wp-content/uploads/sites/2/2024/11/CATStudio_V3.1.0.85.zip)：本次使用的 3.1.0.85 工具包，内含 WTPTP WinUSB 驱动。匹配的是实际硬件 ID 和签名，不代表移远官方声明支持这台 MA217。完整工具包约 147 MB，不随本仓库再分发。
 - [LZMA SDK 官方页](https://www.7-zip.org/sdk.html)：本次使用 26.05 的 x64 `lzma.exe`，`e input output -d20`。发布工具不夹带下载器或驱动安装程序。
