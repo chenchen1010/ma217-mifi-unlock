@@ -1,0 +1,17 @@
+{
+  "known_identity_values_checked": 16,
+  "encodings": [
+    "ASCII",
+    "UTF-16LE",
+    "packed digits",
+    "swapped BCD",
+    "binary MAC"
+  ],
+  "full_device_dump_had_identity_matches": true,
+  "full_device_dump_published": false,
+  "published_oslo_known_identity_matches": 0,
+  "decoded_oslo_segments_checked": 10,
+  "decoded_oslo_known_identity_matches": 0,
+  "private_key_pem_markers_found": false,
+  "limitation": "Known identity scan plus decoded program inspection; does not certify arbitrary firmware is free of all secrets."
+}

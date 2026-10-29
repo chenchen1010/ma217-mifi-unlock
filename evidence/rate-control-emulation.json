@@ -1,0 +1,88 @@
+{
+  "offline_only": true,
+  "original_function": "0x657ccbc",
+  "patch_address": "0x657ccbe",
+  "before": "60b9",
+  "after": "0020",
+  "results": [
+    {
+      "modified": false,
+      "configured_limit": 0,
+      "enabled": [
+        0,
+        0
+      ],
+      "stored_thresholds": [
+        16843009,
+        16843009
+      ],
+      "returned_normally": true
+    },
+    {
+      "modified": false,
+      "configured_limit": 20000,
+      "enabled": [
+        1,
+        1
+      ],
+      "stored_thresholds": [
+        2500000,
+        1250000
+      ],
+      "returned_normally": true
+    },
+    {
+      "modified": false,
+      "configured_limit": 50000,
+      "enabled": [
+        1,
+        1
+      ],
+      "stored_thresholds": [
+        6250000,
+        3125000
+      ],
+      "returned_normally": true
+    },
+    {
+      "modified": true,
+      "configured_limit": 0,
+      "enabled": [
+        0,
+        0
+      ],
+      "stored_thresholds": [
+        16843009,
+        16843009
+      ],
+      "returned_normally": true
+    },
+    {
+      "modified": true,
+      "configured_limit": 20000,
+      "enabled": [
+        0,
+        0
+      ],
+      "stored_thresholds": [
+        16843009,
+        16843009
+      ],
+      "returned_normally": true
+    },
+    {
+      "modified": true,
+      "configured_limit": 50000,
+      "enabled": [
+        0,
+        0
+      ],
+      "stored_thresholds": [
+        16843009,
+        16843009
+      ],
+      "returned_normally": true
+    }
+  ],
+  "limitation": "Checks the original setup function and both enable flags; hardware throughput acceptance pending."
+}

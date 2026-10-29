@@ -1,0 +1,21 @@
+{
+  "offline_tests_passed": 7,
+  "rebuild_matches_flashed_oslo": true,
+  "packages": {
+    "recover-original": {
+      "sha256": "c5f6336c29f11990c45c62a7f85565c030a513ee225b53b23091b937c0fe50c1",
+      "matches_previously_flashed_package": true
+    },
+    "apply-rate-off": {
+      "sha256": "c01c0f2f568bbd050113c954c6214a54d9395afb54c63b4a47d24d977223ea44",
+      "matches_previously_flashed_package": true
+    }
+  },
+  "erase_blocks_emulated": [
+    65536,
+    131072
+  ],
+  "original_arm_decoder_passed": true,
+  "public_refactor_hardware_retested": false,
+  "noop": "Compact verification-only package tested offline; no Flash writes; public CLI needs a fresh device-local noop/readback proof"
+}

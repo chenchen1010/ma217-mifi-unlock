@@ -1,0 +1,45 @@
+{
+  "profile": {
+    "hardware": "LBF1A_N10",
+    "version": "LBF1ANT_N10_WH_2ESIM_V001",
+    "platform": "ASR1803",
+    "original_flash_region": [
+      "0x40000",
+      "0x450000"
+    ]
+  },
+  "images": [
+    {
+      "name": "OSLO-original.bin",
+      "bytes": 4259840,
+      "sha256": "640a7c75b41099266979167949c39e57b877091da648a1f2ea6e99d75a7b50f9",
+      "role": "Unmodified application program image, not a full-device backup"
+    },
+    {
+      "name": "OSLO-unlocked.bin",
+      "bytes": 4259840,
+      "sha256": "f6fbe10a90201d9269ae43d6e1455c1844556bd0e7be55f27e4e10144c5e0dcb",
+      "role": "Application program with three patches, not a web-upgrade package"
+    }
+  ],
+  "changed_unpacked_bytes": 6,
+  "whole_chip_dump_included": false,
+  "patches": [
+    {
+      "address": "0x065788a6",
+      "before": "2048",
+      "after": "7047"
+    },
+    {
+      "address": "0x0656e584",
+      "before": "0022",
+      "after": "7047"
+    },
+    {
+      "address": "0x0657ccbe",
+      "before": "60b9",
+      "after": "0020"
+    }
+  ],
+  "license_notice": "MIT covers original tools/docs only; vendor binary rights remain with their respective owners."
+}

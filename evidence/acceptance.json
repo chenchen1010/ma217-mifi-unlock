@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-29",
+  "timezone": "Asia/Shanghai",
+  "sample_devices": 1,
+  "final_state": "Modified firmware retained; prior recovery was an intermediate stage",
+  "patch_readback_matches": true,
+  "firmware_outside_ap_unchanged": true,
+  "webui_unchanged": true,
+  "auth_patch_post_reboot": {
+    "duration_seconds": 297.8,
+    "valid_samples": 90,
+    "all_external_unbanned": true,
+    "wifi_https_passed": 10,
+    "wifi_https_total": 10
+  },
+  "final_patch_reboot": {
+    "uptime_before": 48,
+    "uptime_after": 10,
+    "external_sim_automatically_selected": true,
+    "operator": "CHN TELECOM",
+    "ban": 0,
+    "manual_reselection": false,
+    "wifi_https_verified": true
+  },
+  "rate_download_Mbps": {
+    "before": 16.679225549851903,
+    "after": 25.875791016120015,
+    "after_reboot": 25.870803392325673
+  },
+  "rate_bytes_per_trial": 16777216,
+  "rate_limitation": "Same entry URL; different CDN peers and uncontrolled RF conditions",
+  "final_observation": {
+    "last_valid_elapsed_seconds": 149.4,
+    "valid_samples": 46,
+    "http_query_errors_before_disconnect": 1,
+    "external_unbanned_all_valid_samples": true,
+    "https_passed": 6,
+    "https_total": 6,
+    "full_five_minutes_completed": false,
+    "interruption": "User explicitly confirmed taking/unplugging the device; not classified as spontaneous reset"
+  },
+  "limitations": [
+    "No multi-day stability validation",
+    "No second-device hardware replication",
+    "No other carriers validated",
+    "8 MiB capture is not independent physical capacity proof"
+  ]
+}
