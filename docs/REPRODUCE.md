@@ -1,8 +1,10 @@
 # 从自己的设备复现
 
+AI 执行时先遵循 [SKILL.md](../SKILL.md) 的阶段规则，再使用本文命令。本文是操作参考，不代表可以跳过上一条的结果连续执行所有命令。
+
 ## 0. 匹配条件和文件
 
-只连接一台目标设备。主板、固件版本、原始 OSLO 和 OBMI 哈希必须与 README / `profile_ma217.py` 一致。任何一项不同就需要重新分析，不能删掉断言继续刷。脚本不能使用 `python -O`。
+只连接一台目标设备。主板、固件版本、原始 OSLO 和 OBMI 哈希必须与 [设备事实卡](../facts/SUPPORTED_DEVICE.md) 及 `profile_ma217.py` 一致。任何已读到的值不同就停止套用，不能删掉断言继续刷。尚未取得的程序哈希按下文通过适用的只读路径补齐，不能预先猜测为匹配。脚本不能使用 `python -O`。
 
 硬件操作需要可传文件的 USB 线、稳定装好的电池以及匹配的 WinUSB 驱动。全过程不使用 RESET、不清空 Flash、不改 IMEI / OTP / 未知 NV。
 
@@ -94,10 +96,10 @@ python mifi_wtp_read_header.py --identification $probe --read-flash-8m --wait-se
 
 ```powershell
 python prepare_local.py --backup $backup1 --second-backup $backup2
-python -m unittest discover -s tests -v
 python build_mifi_package.py --mode recover-original
 python build_mifi_package.py --mode apply-rate-off
 python build_mifi_package.py --mode noop
+python -m unittest discover -s tests -v
 python emulate_mifi_package.py --mode recover-original
 python emulate_mifi_package.py --mode apply-rate-off
 python emulate_mifi_package.py --mode noop
@@ -106,7 +108,7 @@ python emulate_mifi_lzma.py
 
 `prepare_local.py` 校验两次读取的固件、身份区、WebUI 一致，以及原 OSLO / OBMI 和补丁哈希；它只在本地创建 `artifacts/`。本例 PSM 配置可能正常变化，所以不能要求整个运行数据区每次启动都一样。
 
-所有模拟必须通过。修改包、恢复包唯一写入范围为 `0x260000..0x320000`，长度 `0xc0000`，起点和长度均按 128 KiB 对齐。包里的其他镜像只用于原机校验，`erase_size=0`、`commands=2`。严禁改成 `Erase All Flash`。
+构建后运行检查，涉及包的测试不能因文件缺失而 `skipped`；所有模拟必须通过。修改包、恢复包唯一写入范围为 `0x260000..0x320000`，长度 `0xc0000`，起点和长度均按 128 KiB 对齐。包里的其他镜像只用于原机校验，`erase_size=0`、`commands=2`。严禁改成 `Erase All Flash`。
 
 若要从 6 字节补丁自行重建程序镜像，下载官方 [LZMA SDK 26.05](https://www.7-zip.org/sdk.html)，执行：
 
